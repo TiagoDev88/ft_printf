@@ -10,14 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
+#include "ft_printf.h"
+/**
+ * @brief Writes a single character to standard output.
+ * 
+ * @param c The character to be printed.
+ * @return int Always returns 1 (the number of characters printed).
+ */
 int	ft_printf_putchar(char c)
 {
-	int	i;
+	int	count;
 
-	i = 1;
+	count = 1;
 	write(1, &c, 1);
-
-	return (i);
+	return (count);
 }

@@ -10,19 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
+#include "ft_printf.h"
+/**
+ * @brief Writes a string to standard output.
+ * 
+ * @param str Pointer to the string to be printed.
+ * @return int The number of characters printed.
+ */
 int	ft_printf_putstr(char *str)
 {
-	int	i;
+	int	count;
 
 	if (!str)
-		ft_printf("(NULL)");
-	i = 0;
-	while (str[i])
+		str = "(null)";
+	count = 0;
+	while (str[count])
 	{
-		ft_printf_putchar(str[i]);
-		i++;
+		ft_printf_putchar(str[count]);
+		count++;
 	}
-	return (i);
+	return (count);
 }

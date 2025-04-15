@@ -10,15 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
-
-int	ft_putnbr_base(unsigned long long nbr, char *base, int base_int)
+#include "ft_printf.h"
+/**
+ * @brief Prints an unsigned long number in a given base.
+ * 
+ * @param nbr The number to be converted and printed.
+ * @param base The base to convert the number into (e.g., "0123456789abcdef").
+ * @return int The number of characters printed.
+ */
+int	ft_putnbr_base(unsigned long nbr, char *base)
 {
-	int	res;
+	int		count;
+	int		base_len;
 
-	res = 0;
-	if (nbr > (unsigned long long)base_int)
-		res = res + ft_putnbr_base(nbr / base_int, base, base_int);
-	ft_printf_putchar(base[nbr % base_int]);
-	return (res + 1);
+	base_len = 0;
+	while (base[base_len])
+		base_len++;
+	count = 0;
+	if (nbr >= (unsigned long)base_len)
+		count = count + ft_putnbr_base(nbr / base_len, base);
+	count = count + ft_printf_putchar(base[nbr % base_len]);
+	return (count);
 }
