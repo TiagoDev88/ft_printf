@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tfilipe- <tfilipe-@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/14 16:43:53 by tfilipe-          #+#    #+#             */
-/*   Updated: 2025/04/15 17:24:00 by tfilipe-         ###   ########.fr       */
+/*   Created: 2025/04/15 15:01:54 by tfilipe-          #+#    #+#             */
+/*   Updated: 2025/04/15 17:22:26 by tfilipe-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
+#include "libftprintf.h"
 
-#define LIBFTPRINTF_H
+int	ft_putnbr_base(unsigned long long nbr, char *base, int base_int)
+{
+	int	res;
 
-# include <stdarg.h>
-# include <unistd.h>
-
-int	ft_printf(const char *, ...);
-int	ft_printf_putstr(char *str);
-int	ft_printf_putchar(char c);
-int	ft_putnbr_base(unsigned long long nbr, char *base, int base_int);
-int	ft_putnbr(int nbr);
-int	ft_putnbr_unsigned(unsigned int nbr);
-int	ft_check_format(char str, va_list args);
-
-
-#endif
+	res = 0;
+	if (nbr > (unsigned long long)base_int)
+		res = res + ft_putnbr_base(nbr / base_int, base, base_int);
+	ft_printf_putchar(base[nbr % base_int]);
+	return (res + 1);
+}
