@@ -94,6 +94,8 @@ int	ft_printf(const char *str, ...)
 // 	int		min_int = -2147483648;
 // 	void	*ptr = (void *)0x7ffe2b8ef1dc;
 // 	void	*null_ptr = NULL;
+// 	unsigned int	vals[] = {0, 1, 42, 300, 4294967295U};
+// 	int	i = 0;
 
 // 	printf("==== STRING TESTS ====\n");
 // 	ret_ft = ft_printf("ft_printf: [%s]\n", str);
@@ -163,6 +165,18 @@ int	ft_printf(const char *str, ...)
 // 	ret_ft = ft_printf("ft_printf: [%%]\n");
 // 	ret_std = printf("printf   : [%%]\n");
 // 	printf("Return ft_printf: %d | printf: %d\n\n", ret_ft, ret_std);
+
+// 	printf("==== TEST WITH %%u ====\n");
+// 	while (i < 5)
+// 	{
+// 		printf("Testing with value: %u\n", vals[i]);
+
+// 		ret_ft = ft_printf("ft_printf: [%u]\n", vals[i]);
+// 		ret_std = printf("printf   : [%u]\n", vals[i]);
+// 		printf("Return ft_printf: %d | printf: %d\n\n", ret_ft, ret_std);
+
+// 		i++;
+// 	}
 
 // 	return (0);
 // }

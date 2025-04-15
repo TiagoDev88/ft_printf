@@ -23,7 +23,7 @@ int	ft_putnbr_unsigned(unsigned int nbr)
 
 	count = 0;
 	if (nbr > 9)
-		count = count + ft_putnbr(nbr / 10);
+		count = count + ft_putnbr_unsigned(nbr / 10);
 	count = count + ft_printf_putchar((nbr % 10) + 48);
 	return (count);
 }
