@@ -102,7 +102,7 @@ paulo-santana/printf-tester
 
 Tripouille/printfTester
 
-👤 Author
-Tiago Filipe
+## **👤 Author**
+
 42 login: tfilipe-
 GitHub: @TiagoDev88
