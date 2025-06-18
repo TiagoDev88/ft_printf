@@ -1,6 +1,7 @@
-<h1 align="center">
-	🖨️ ft_printf
-</h1>
+<h2 align="center">
+
+[![LIBFT](https://github.com/TiagoDev88/42-project-badges/blob/main/badges/libftm.png)](https://github.com/TiagoDev88/libft) 
+</h2>
 
 <p align="center">
 	<b><i>Your own printf implementation in C</i></b><br>
