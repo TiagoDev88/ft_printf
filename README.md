@@ -1,6 +1,6 @@
 <h2 align="center">
 
-[![LIBFT](https://github.com/TiagoDev88/42-project-badges/blob/main/badges/libftm.png)](https://github.com/TiagoDev88/libft) 
+[![FT_PRINTF](https://github.com/TiagoDev88/42-project-badges/blob/main/badges/ft_printfe.png)](https://github.com/TiagoDev88/ft_printf) 
 </h2>
 
 <p align="center">
